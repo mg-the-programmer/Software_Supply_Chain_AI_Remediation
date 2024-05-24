@@ -1,0 +1,11 @@
+openai
+langchain
+google-search-results
+streamlit
+pypdf2
+langchain_openai
+python-dotenv==1.0.0
+faiss-cpu
+matplotlib
+altair==4
+tiktoken

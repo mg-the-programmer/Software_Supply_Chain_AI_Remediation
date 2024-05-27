@@ -9,3 +9,4 @@ faiss-cpu
 matplotlib
 altair==4
 tiktoken
+toml

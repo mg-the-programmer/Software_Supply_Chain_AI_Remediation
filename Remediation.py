@@ -7,6 +7,7 @@ import os
 
 
 load_dotenv()
+
 client=openai()
 
 query_responses = []
@@ -88,15 +89,15 @@ if uploaded_file:
         target = item.get("Target")
         required_version = item.get("Required Version")
 
-    query = f''' As an Developer, that reads the {fetched_data} and for the vulnerabilites you need to give the solution code to fix it. 
-    1 - With the Type, Target and PKG name with these find which languages it is and use the `required version` in the output to reinstall the package in which language the package is. 
-    2 - You job mainly will be installing the required version and give code for it. 
+    query = f''' As an Developer, that reads the {fetched_data} and for the vulnerabilites you need to give the fixed version that is replaced in the dependency files to fix the vulnerabilities. 
+    1 - With the Type, Target and PKG name with these find which languages it is and use the `required version` in the output.
+    2 - You job mainly will be installing the required version for that give content to replace it in the dependency files or package management files eg - requirement.txt or package.json. 
     3 - Remember give package installation suggesstion for all the items in the one list it will easy for the user to copy paste the updated version the targeted file package installer file. 
     4 - If the package language is python suggest the things to be changed in the requirement.txt with the fixed version, so that multiple package can be installed with a single command. Don't give code suggestion to create requirement.txt just give the requirement contents to copy paste.
-    5 - Always what ever the language it is try to give a single to fix command. Like For Example if it is react we use package.json for the fixed version keep all the package in one single command and give the output. 
+    5 - Always what ever the language it is try to give a single fix. Like For Example if it is react we use package.json for the fixed version keep all the package in one single fix and give the output. 
     6 - Always recommend how to rewrite the target file to upgrade the package. In the Fetched data `target file` location will be there give instruction to how to install in that particular directory. For example App/requirement.txt will have some upgrades and some requirement.txt will have some upgrades. So Accroding to the target file group them one by one. 
     7 - Sometimes the installing the fixed version will cause conflict, because transtive dependencies give warning that if it cause any conflict how to upgrade the package just give the upgrade cmd template because you don't know which package it is conflicting. REMEMBER there will be multiple required version will be there in that always always chose the latest among those
-    
+
     Desired format: 
 
     Steps to reinstall the packages : ```

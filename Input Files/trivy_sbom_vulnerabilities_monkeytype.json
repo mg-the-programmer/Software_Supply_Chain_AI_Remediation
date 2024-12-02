@@ -1,0 +1,740 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2024-05-22T12:50:11.9762249+05:30",
+  "ArtifactName": "trivy_sbom_monkeytype.json",
+  "ArtifactType": "cyclonedx",
+  "Metadata": {
+    "ImageConfig": {
+      "architecture": "",
+      "created": "0001-01-01T00:00:00Z",
+      "os": "",
+      "rootfs": {
+        "type": "",
+        "diff_ids": null
+      },
+      "config": {}
+    }
+  },
+  "Results": [
+    {
+      "Target": "Node.js",
+      "Class": "lang-pkgs",
+      "Type": "node-pkg",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2023-25166",
+          "PkgID": "@sideway/formula@3.0.0",
+          "PkgName": "@sideway/formula",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/%40sideway/formula@3.0.0",
+            "UID": "71c2871e5d8ebadf",
+            "BOMRef": "pkg:npm/%40sideway/formula@3.0.0"
+          },
+          "InstalledVersion": "3.0.0",
+          "FixedVersion": "3.0.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-25166",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "@sideway/formula: Regular Expression Denial of Service (ReDoS) Vulnerability",
+          "Description": "formula is a math and string formula parser. In versions prior to 3.0.1 crafted user-provided strings to formula's parser might lead to polynomial execution time and a denial of service. Users should upgrade to 3.0.1+. There are no known workarounds for this vulnerability.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-1333"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 6.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-25166",
+            "https://github.com/hapijs/formula",
+            "https://github.com/hapijs/formula/commit/9fbc20a02d75ae809c37a610a57802cd1b41b3fe",
+            "https://github.com/hapijs/formula/security/advisories/GHSA-c2jc-4fpr-4vhg",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-25166",
+            "https://www.cve.org/CVERecord?id=CVE-2023-25166"
+          ],
+          "PublishedDate": "2023-02-08T20:15:25.017Z",
+          "LastModifiedDate": "2023-02-16T19:53:15.197Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-28849",
+          "PkgID": "follow-redirects@1.15.5",
+          "PkgName": "follow-redirects",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/follow-redirects@1.15.5",
+            "UID": "cf3a371f7cc23ff3",
+            "BOMRef": "pkg:npm/follow-redirects@1.15.5"
+          },
+          "InstalledVersion": "1.15.5",
+          "FixedVersion": "1.15.6",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-28849",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "follow-redirects: Possible credential leak",
+          "Description": "follow-redirects is an open source, drop-in replacement for Node's `http` and `https` modules that automatically follows redirects. In affected versions follow-redirects only clears authorization header during cross-domain redirect, but keep the proxy-authentication header which contains credentials too. This vulnerability may lead to credentials leak, but has been addressed in version 1.15.6. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-200"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 6.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-28849",
+            "https://fetch.spec.whatwg.org/#authentication-entries",
+            "https://github.com/follow-redirects/follow-redirects",
+            "https://github.com/follow-redirects/follow-redirects/commit/c4f847f85176991f95ab9c88af63b1294de8649b",
+            "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-cxjh-pqwp-8mfp",
+            "https://github.com/psf/requests/issues/1885",
+            "https://hackerone.com/reports/2390009",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOIF4EPQUCKDBEVTGRQDZ3CGTYQHPO7Z",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOIF4EPQUCKDBEVTGRQDZ3CGTYQHPO7Z/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-28849",
+            "https://www.cve.org/CVERecord?id=CVE-2024-28849"
+          ],
+          "PublishedDate": "2024-03-14T17:15:52.097Z",
+          "LastModifiedDate": "2024-03-23T03:15:11.97Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-37620",
+          "PkgID": "html-minifier@4.0.0",
+          "PkgName": "html-minifier",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/html-minifier@4.0.0",
+            "UID": "7241b0a0d5b8c66b",
+            "BOMRef": "pkg:npm/html-minifier@4.0.0"
+          },
+          "InstalledVersion": "4.0.0",
+          "Status": "affected",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-37620",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "kangax html-minifier REDoS vulnerability",
+          "Description": "A Regular Expression Denial of Service (ReDoS) flaw was found in kangax html-minifier 4.0.0 via the candidate variable in htmlminifier.js.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-1333"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/kangax/html-minifier",
+            "https://github.com/kangax/html-minifier/blob/51ce10f4daedb1de483ffbcccecc41be1c873da2/src/htmlminifier.js#L1338",
+            "https://github.com/kangax/html-minifier/blob/51ce10f4daedb1de483ffbcccecc41be1c873da2/src/htmlminifier.js#L294",
+            "https://github.com/kangax/html-minifier/issues/1135",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-37620"
+          ],
+          "PublishedDate": "2022-10-31T12:15:10.137Z",
+          "LastModifiedDate": "2023-08-08T14:22:24.967Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-42282",
+          "PkgID": "ip@2.0.0",
+          "PkgName": "ip",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/ip@2.0.0",
+            "UID": "278904c931a8c8a",
+            "BOMRef": "pkg:npm/ip@2.0.0"
+          },
+          "InstalledVersion": "2.0.0",
+          "FixedVersion": "2.0.1, 1.1.9",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-42282",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-ip: arbitrary code execution via the isPublic() function",
+          "Description": "The ip package before 1.1.9 for Node.js might allow SSRF because some IP addresses (such as 0x7f.1) are improperly categorized as globally routable via isPublic.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-918"
+          ],
+          "VendorSeverity": {
+            "cbl-mariner": 4,
+            "ghsa": 2,
+            "nvd": 4,
+            "redhat": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-42282",
+            "https://cosmosofcyberspace.github.io/npm_ip_cve/npm_ip_cve.html",
+            "https://github.com/JoshGlazebrook/socks/issues/93#issue-2128357447",
+            "https://github.com/github/advisory-database/pull/3504#issuecomment-1937179999",
+            "https://github.com/indutny/node-ip",
+            "https://github.com/indutny/node-ip/commit/32f468f1245574785ec080705737a579be1223aa",
+            "https://github.com/indutny/node-ip/commit/6a3ada9b471b09d5f0f5be264911ab564bf67894",
+            "https://github.com/indutny/node-ip/pull/138",
+            "https://huntr.com/bounties/bfc3b23f-ddc0-4ee7-afab-223b07115ed3/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-42282",
+            "https://security.netapp.com/advisory/ntap-20240315-0008/",
+            "https://ubuntu.com/security/notices/USN-6643-1",
+            "https://www.cve.org/CVERecord?id=CVE-2023-42282"
+          ],
+          "PublishedDate": "2024-02-08T17:15:10.84Z",
+          "LastModifiedDate": "2024-03-15T19:25:07.84Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-28176",
+          "PkgID": "jose@4.14.0",
+          "PkgName": "jose",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/jose@4.14.0",
+            "UID": "d3550b0d8fb920e8",
+            "BOMRef": "pkg:npm/jose@4.14.0"
+          },
+          "InstalledVersion": "4.14.0",
+          "FixedVersion": "4.15.5, 2.0.7",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-28176",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "jose: resource exhaustion",
+          "Description": "jose is JavaScript module for JSON Object Signing and Encryption, providing support for JSON Web Tokens (JWT), JSON Web Signature (JWS), JSON Web Encryption (JWE), JSON Web Key (JWK), JSON Web Key Set (JWKS), and more. A vulnerability has \n been identified in the JSON Web Encryption (JWE) decryption interfaces, specifically related to the support for decompressing plaintext after its decryption. Under certain conditions it is possible to have the user's environment consume unreasonable amount of CPU time or memory during JWE Decryption operations. This issue has been patched in versions 2.0.7 and 4.15.5.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-28176",
+            "https://github.com/panva/jose",
+            "https://github.com/panva/jose/commit/02a65794f7873cdaf12e81e80ad076fcdc4a9314",
+            "https://github.com/panva/jose/commit/1b91d88d2f8233f3477a5f4579aa5f8057b2ee8b",
+            "https://github.com/panva/jose/security/advisories/GHSA-hhhv-q57g-882q",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6MMWFBOXJA6ZCXNVPDFJ4XMK5PVG5RG",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I6MMWFBOXJA6ZCXNVPDFJ4XMK5PVG5RG/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KXKGNCRU7OTM5AHC7YIYBNOWI742PRMY",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KXKGNCRU7OTM5AHC7YIYBNOWI742PRMY/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UG5FSEYJ3GP27FZXC5YAAMMEC5XWKJHG",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UG5FSEYJ3GP27FZXC5YAAMMEC5XWKJHG/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UJO2U5ACZVACNQXJ5EBRFLFW6DP5BROY",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UJO2U5ACZVACNQXJ5EBRFLFW6DP5BROY/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XJDO5VSIAOGT2WP63AXAAWNRSVJCNCRH",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XJDO5VSIAOGT2WP63AXAAWNRSVJCNCRH/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-28176",
+            "https://www.cve.org/CVERecord?id=CVE-2024-28176"
+          ],
+          "PublishedDate": "2024-03-09T01:15:07.147Z",
+          "LastModifiedDate": "2024-03-30T04:15:08.393Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-52079",
+          "PkgID": "msgpackr@1.8.5",
+          "PkgName": "msgpackr",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/msgpackr@1.8.5",
+            "UID": "a94e15263f926e79",
+            "BOMRef": "pkg:npm/msgpackr@1.8.5"
+          },
+          "InstalledVersion": "1.8.5",
+          "FixedVersion": "1.10.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-52079",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "msgpackr: crafted message leads to Denial of Service",
+          "Description": "msgpackr is a fast MessagePack NodeJS/JavaScript implementation. Prior to 1.10.1, when decoding user supplied MessagePack messages, users can trigger stuck threads by crafting messages that keep the decoder stuck in a loop. The fix is available in v1.10.1.  \nExploits seem to require structured cloning, replacing the 0x70 extension with your own (that throws an error or does something other than recursive referencing) should mitigate the issue.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-674",
+            "CWE-754"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "V3Score": 8.6
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 6.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-52079",
+            "https://github.com/kriszyp/msgpackr",
+            "https://github.com/kriszyp/msgpackr/commit/18f44f8800e2261341cdf489d1ba1e35a0133602",
+            "https://github.com/kriszyp/msgpackr/security/advisories/GHSA-7hpj-7hhx-2fgx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-52079",
+            "https://www.cve.org/CVERecord?id=CVE-2023-52079"
+          ],
+          "PublishedDate": "2023-12-28T16:16:01.863Z",
+          "LastModifiedDate": "2024-01-04T19:24:22.547Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-25883",
+          "PkgID": "semver@6.3.0",
+          "PkgName": "semver",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/semver@6.3.0",
+            "UID": "ff5b42bb958f8dac",
+            "BOMRef": "pkg:npm/semver@6.3.0"
+          },
+          "InstalledVersion": "6.3.0",
+          "FixedVersion": "7.5.2, 6.3.1, 5.7.2",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-25883",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-semver: Regular expression denial of service",
+          "Description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-1333"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "amazon": 3,
+            "cbl-mariner": 3,
+            "ghsa": 2,
+            "nvd": 3,
+            "oracle-oval": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:5363",
+            "https://access.redhat.com/security/cve/CVE-2022-25883",
+            "https://bugzilla.redhat.com/2216475",
+            "https://bugzilla.redhat.com/2230948",
+            "https://bugzilla.redhat.com/2230955",
+            "https://bugzilla.redhat.com/2230956",
+            "https://errata.almalinux.org/9/ALSA-2023-5363.html",
+            "https://github.com/advisories/GHSA-c2qf-rxjj-qqgw",
+            "https://github.com/npm/node-semver",
+            "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104",
+            "https://github.com/npm/node-semver/blob/main/classes/range.js%23L97-L104",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js#L138",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js#L160",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js%23L138",
+            "https://github.com/npm/node-semver/blob/main/internal/re.js%23L160",
+            "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0",
+            "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441",
+            "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c",
+            "https://github.com/npm/node-semver/pull/564",
+            "https://github.com/npm/node-semver/pull/585",
+            "https://github.com/npm/node-semver/pull/593",
+            "https://linux.oracle.com/cve/CVE-2022-25883.html",
+            "https://linux.oracle.com/errata/ELSA-2023-5363.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-25883",
+            "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795",
+            "https://www.cve.org/CVERecord?id=CVE-2022-25883"
+          ],
+          "PublishedDate": "2023-06-21T05:15:09.06Z",
+          "LastModifiedDate": "2023-11-07T03:44:51.993Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-24758",
+          "PkgID": "undici@5.26.5",
+          "PkgName": "undici",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/undici@5.26.5",
+            "UID": "908226d3d64fbb47",
+            "BOMRef": "pkg:npm/undici@5.26.5"
+          },
+          "InstalledVersion": "5.26.5",
+          "FixedVersion": "5.28.3, 6.6.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-24758",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "undici: sensitive information exposure",
+          "Description": "Undici is an HTTP/1.1 client, written from scratch for Node.js. Undici already cleared Authorization headers on cross-origin redirects, but did not clear `Proxy-Authentication` headers. This issue has been patched in versions 5.28.3 and 6.6.1. Users are advised to upgrade. There are no known workarounds for this vulnerability.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-200"
+          ],
+          "VendorSeverity": {
+            "amazon": 2,
+            "ghsa": 1,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L",
+              "V3Score": 3.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L",
+              "V3Score": 3.9
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2024/03/11/1",
+            "https://access.redhat.com/security/cve/CVE-2024-24758",
+            "https://github.com/nodejs/undici",
+            "https://github.com/nodejs/undici/commit/b9da3e40f1f096a06b4caedbb27c2568730434ef",
+            "https://github.com/nodejs/undici/commit/d3aa574b1259c1d8d329a0f0f495ee82882b1458",
+            "https://github.com/nodejs/undici/releases/tag/v5.28.3",
+            "https://github.com/nodejs/undici/releases/tag/v6.6.1",
+            "https://github.com/nodejs/undici/security/advisories/GHSA-3787-6prv-h9w3",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-24758",
+            "https://security.netapp.com/advisory/ntap-20240419-0007",
+            "https://security.netapp.com/advisory/ntap-20240419-0007/",
+            "https://www.cve.org/CVERecord?id=CVE-2024-24758"
+          ],
+          "PublishedDate": "2024-02-16T22:15:08.16Z",
+          "LastModifiedDate": "2024-05-01T18:15:14.833Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-30260",
+          "PkgID": "undici@5.26.5",
+          "PkgName": "undici",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/undici@5.26.5",
+            "UID": "908226d3d64fbb47",
+            "BOMRef": "pkg:npm/undici@5.26.5"
+          },
+          "InstalledVersion": "5.26.5",
+          "FixedVersion": "5.28.4, 6.11.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-30260",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-undici: proxy-authorization header not cleared on cross-origin redirect for dispatch, request, stream, pipeline",
+          "Description": "Undici is an HTTP/1.1 client, written from scratch for Node.js. Undici cleared Authorization and Proxy-Authorization headers for `fetch()`, but did not clear them for `undici.request()`. This vulnerability was patched in version(s) 5.28.4 and 6.11.1.\n",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-285"
+          ],
+          "VendorSeverity": {
+            "cbl-mariner": 1,
+            "ghsa": 1,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L",
+              "V3Score": 3.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:L/I:L/A:L",
+              "V3Score": 3.9
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-30260",
+            "https://github.com/nodejs/undici",
+            "https://github.com/nodejs/undici/commit/64e3402da4e032e68de46acb52800c9a06aaea3f",
+            "https://github.com/nodejs/undici/commit/6805746680d27a5369d7fb67bc05f95a28247d75",
+            "https://github.com/nodejs/undici/security/advisories/GHSA-m4v8-wqvr-p9f7",
+            "https://hackerone.com/reports/2408074",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HQVHWAS6WDXXIU7F72XI55VZ2LTZUB33",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HQVHWAS6WDXXIU7F72XI55VZ2LTZUB33/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NC3V3HFZ5MOJRZDY5ZELL6REIRSPFROJ",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NC3V3HFZ5MOJRZDY5ZELL6REIRSPFROJ/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P6Q4RGETHVYVHDIQGTJGU5AV6NJEI67E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P6Q4RGETHVYVHDIQGTJGU5AV6NJEI67E/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-30260",
+            "https://www.cve.org/CVERecord?id=CVE-2024-30260"
+          ],
+          "PublishedDate": "2024-04-04T16:15:08.877Z",
+          "LastModifiedDate": "2024-04-19T23:15:11.047Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-30261",
+          "PkgID": "undici@5.26.5",
+          "PkgName": "undici",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/undici@5.26.5",
+            "UID": "908226d3d64fbb47",
+            "BOMRef": "pkg:npm/undici@5.26.5"
+          },
+          "InstalledVersion": "5.26.5",
+          "FixedVersion": "5.28.4, 6.11.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-30261",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-undici: fetch() with integrity option is too lax when algorithm is specified but hash value is in incorrect",
+          "Description": "Undici is an HTTP/1.1 client, written from scratch for Node.js. An attacker can alter the `integrity` option passed to `fetch()`, allowing `fetch()` to accept requests as valid even if they have been tampered. This vulnerability was patched in version(s) 5.28.4 and 6.11.1.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-284"
+          ],
+          "VendorSeverity": {
+            "amazon": 3,
+            "cbl-mariner": 1,
+            "ghsa": 1,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N",
+              "V3Score": 2.6
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:N",
+              "V3Score": 2.6
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-30261",
+            "https://github.com/nodejs/undici",
+            "https://github.com/nodejs/undici/commit/2b39440bd9ded841c93dd72138f3b1763ae26055",
+            "https://github.com/nodejs/undici/commit/d542b8cd39ec1ba303f038ea26098c3f355974f3",
+            "https://github.com/nodejs/undici/security/advisories/GHSA-9qxr-qj54-h672",
+            "https://hackerone.com/reports/2377760",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HQVHWAS6WDXXIU7F72XI55VZ2LTZUB33",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HQVHWAS6WDXXIU7F72XI55VZ2LTZUB33/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NC3V3HFZ5MOJRZDY5ZELL6REIRSPFROJ",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NC3V3HFZ5MOJRZDY5ZELL6REIRSPFROJ/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P6Q4RGETHVYVHDIQGTJGU5AV6NJEI67E",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/P6Q4RGETHVYVHDIQGTJGU5AV6NJEI67E/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-30261",
+            "https://www.cve.org/CVERecord?id=CVE-2024-30261"
+          ],
+          "PublishedDate": "2024-04-04T15:15:39.46Z",
+          "LastModifiedDate": "2024-04-19T23:15:11.137Z"
+        }
+      ]
+    },
+    {
+      "Target": "backend/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2024-29041",
+          "PkgID": "express@4.17.3",
+          "PkgName": "express",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/express@4.17.3",
+            "UID": "5f3d4198ce4c9801",
+            "BOMRef": "pkg:npm/express@4.17.3"
+          },
+          "InstalledVersion": "4.17.3",
+          "FixedVersion": "4.19.2, 5.0.0-beta.3",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-29041",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "Express.js minimalist web framework for node. Versions of Express.js p ...",
+          "Description": "Express.js minimalist web framework for node. Versions of Express.js prior to 4.19.0 and all pre-release alpha and beta versions of 5.0 are affected by an open redirect vulnerability using malformed URLs. When a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list. The main method impacted is `res.location()` but this is also called from within `res.redirect()`. The vulnerability is fixed in 4.19.2 and 5.0.0-beta.3.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-1286",
+            "CWE-601"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            }
+          },
+          "References": [
+            "https://expressjs.com/en/4x/api.html#res.location",
+            "https://github.com/expressjs/express",
+            "https://github.com/expressjs/express/commit/0867302ddbde0e9463d0564fea5861feb708c2dd",
+            "https://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94",
+            "https://github.com/expressjs/express/pull/5539",
+            "https://github.com/expressjs/express/security/advisories/GHSA-rv95-896h-c2vc",
+            "https://github.com/koajs/koa/issues/1800",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-29041"
+          ],
+          "PublishedDate": "2024-03-25T21:15:46.847Z",
+          "LastModifiedDate": "2024-03-26T12:55:05.01Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-25927",
+          "PkgID": "ua-parser-js@0.7.28",
+          "PkgName": "ua-parser-js",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/ua-parser-js@0.7.28",
+            "UID": "bbd81657dd31d6",
+            "BOMRef": "pkg:npm/ua-parser-js@0.7.28"
+          },
+          "InstalledVersion": "0.7.28",
+          "FixedVersion": "0.7.33, 1.0.33",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-25927",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "ua-parser-js: ReDoS vulnerability via the trim() function",
+          "Description": "Versions of the package ua-parser-js from 0.7.30 and before 0.7.33, from 0.8.1 and before 1.0.33 are vulnerable to Regular Expression Denial of Service (ReDoS) via the trim() function.\r\r",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-1333"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-25927",
+            "https://github.com/faisalman/ua-parser-js",
+            "https://github.com/faisalman/ua-parser-js/commit/a6140a17dd0300a35cfc9cff999545f267889411",
+            "https://github.com/faisalman/ua-parser-js/security/advisories/GHSA-fhg7-m89q-25r3",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-25927",
+            "https://security.snyk.io/vuln/SNYK-JS-UAPARSERJS-3244450",
+            "https://www.cve.org/CVERecord?id=CVE-2022-25927"
+          ],
+          "PublishedDate": "2023-01-26T21:15:32.107Z",
+          "LastModifiedDate": "2023-11-07T03:44:53.32Z"
+        }
+      ]
+    }
+  ]
+}
